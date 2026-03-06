@@ -49,20 +49,16 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
+  <div className="app">
+    <p className="title">CityWeather</p>
+    <SearchBar setCity={setCity} fetchWeather={fetchWeather} />
+    {loading && <p className="info">Loading…</p>}
+    {error && <p className="error">⚠ {error}</p>}
+    {weather && <WeatherCard weather={weather} />}
+  </div>
+);
 
-      <h1 className="title">CityWeather</h1>
 
-      <SearchBar setCity={setCity} fetchWeather={fetchWeather} />
-
-      {loading && <p className="info">Loading...</p>}
-
-      {error && <p className="error">{error}</p>}
-
-      {weather && <WeatherCard weather={weather} />}
-
-    </div>
-  );
 }
 
 export default App;
