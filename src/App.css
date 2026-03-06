@@ -166,6 +166,7 @@ body {
   letter-spacing: -6px;
   margin: 14px 0 4px;
   background: linear-gradient(160deg, #ffffff 40%, #93c5fd 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 2px 16px rgba(147,197,253,0.25));
